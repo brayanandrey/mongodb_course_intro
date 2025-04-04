@@ -1,0 +1,25 @@
+use("platzi_store");
+
+//pull quita elementos a un array
+// quitar el tag "books" a todos los documentos
+// db.inventory.updateMany(
+//     {  },
+//     {
+//         $pull: {
+//             tags: "book"
+//         }
+//     }
+// );
+
+//remove the tag otherws elements from array
+
+db.inventory.updateMany(
+    {  },
+    {
+        $pull: {
+            tags:{
+                $in: ["appliance", "school"]
+            } 
+        }
+    }
+);

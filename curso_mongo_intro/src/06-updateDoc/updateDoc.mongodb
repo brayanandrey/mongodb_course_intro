@@ -1,0 +1,11 @@
+use("platzi_store");
+
+db.products.updateOne(
+  { name: "Producto 1" }, // Encontrar documento a actualizar
+  {
+    $set: {
+      price: 3000,
+    },
+  }
+);
+db.products.find();

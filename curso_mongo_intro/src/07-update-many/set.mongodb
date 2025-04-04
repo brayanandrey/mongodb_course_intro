@@ -1,0 +1,32 @@
+use("sample_training");
+// db.zips.updateMany(
+//     {city: "CLEVELAND"},
+//     //update - operators
+//     {
+//         $set: {
+//             myAttri: "Hola" //Incrementa en 1000 la población
+//         }
+//     }
+// );
+
+//Rename
+// db.zips.updateMany(
+//     {city: "CLEVELAND"},
+//     //update - operators
+//     {
+//         $rename: {
+//             myAttr: "my_data" //Incrementa en 1000 la población
+//         }
+//     }
+// );
+
+//$unset
+db.zips.updateMany(
+    {city: "CLEVELAND"},
+    //update - operators
+    {
+        $unset: {
+            myAttri: "" //Incrementa en 1000 la población
+        }
+    }
+);
